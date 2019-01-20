@@ -40,6 +40,9 @@
     section:before {
         display: none;
     }
+    .tm-content-header .tm-banner {
+        border: none;
+    }
 }
 
 .tm-box-bg-title:hover {
