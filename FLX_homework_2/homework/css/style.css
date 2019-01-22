@@ -90,7 +90,7 @@ section:before {
     z-index: 1;
 }
 
-.tm-section-title {
+.flex-2-col h2.tm-section-title {
     color: gainsboro;
     letter-spacing: 5px;
 }
@@ -161,11 +161,11 @@ section:before {
 
 .contact-form .submit-btn {
     float: right;
-    background-color: #fff;
-    color: #87cefa;
+    padding: 10px 50px;
     border: 1px solid #87cefa;
     border-radius: 0;
-    padding: .5em 3em;
+    background-color: #fff;
+    color: #87cefa;
 }
 
 .submit-btn:hover {
