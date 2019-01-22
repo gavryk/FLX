@@ -19,7 +19,7 @@
     .tm-team-description-container {
         width: 100%;
     }
-    h2.tm-team-description-container {
+    h2.tm-section-title {
         color: blue;
         font-size: 200%;
     }
@@ -90,7 +90,7 @@ section:before {
     z-index: 1;
 }
 
-.flex-2-col h2.tm-section-title {
+.carousel-content .flex-item h2.tm-section-title {
     color: gainsboro;
     letter-spacing: 5px;
 }
