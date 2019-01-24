@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #efefef;
+  font: normal 18px/26px Palatino Linotype, Book Antiqua, Palatino, serif; }
+  body main {
+    margin: 0 auto;
+    width: 960px; }
+  body header {
+    background: url(../img/header_background_v2.jpg) no-repeat top/cover;
+    height: 100vh; }
+    body header .top-wrapper {
+      display: flex;
+      justify-content: space-between; }
+      body header .top-wrapper img {
+        width: 250px;
+        height: 150px; }
+      body header .top-wrapper nav a {
+        font-weight: normal;
+        display: inline-block;
+        text-decoration: none;
+        color: #ff5722;
+        padding: 20px 115px;
+        text-transform: uppercase; }
+        body header .top-wrapper nav a:nth-child(2) {
+          border-left: 2px solid #607d8b;
+          border-right: 2px solid #607d8b; }
+    body header section {
+      text-align: center;
+      margin-top: 250px; }
+      body header section h1 {
+        color: #ff5722;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: bold; }
+      body header section a {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        background-color: #0401ac;
+        padding: 15px 60px;
+        margin-top: 15px; }
+  body main .toolbar {
+    text-align: right;
+    padding: 15px 0; }
+    body main .toolbar input {
+      padding: 10px 15px;
+      border: 1px solid #cfd8dc;
+      background-color: transparent; }
+  body main .post-list h1 {
+    text-align: right;
+    text-transform: uppercase;
+    color: #757575; }
+  body main .post-list article {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 10px 15px 10px 10px; }
+    body main .post-list article img {
+      margin-right: 10px; }
+    body main .post-list article .post .post-description {
+      font-size: 12px;
+      padding: 10px 0;
+      color: #c3c3d4;
+      border-bottom: 1px solid #607d8b; }
+    body main .post-list article .post h3 {
+      color: #607d8b;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 5px 0; }
+    body main .post-list article .post p {
+      font-size: 14px;
+      line-height: 1.6em;
+      color: #757575; }
+    body main .post-list article .btn {
+      background-color: #0401ac;
+      border: none;
+      padding: 10px 70px;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 1s ease-out;
+      float: right;
+      margin-top: 20px; }
+      body main .post-list article .btn:hover {
+        background-color: #030193;
+        transition: .5s ease-out; }
+  body main #about {
+    padding: 60px 15px;
+    color: #757575; }
+    body main #about h1 {
+      text-align: right;
+      text-transform: uppercase; }
+    body main #about p {
+      margin-bottom: 30px; }
+    body main #about img {
+      width: 100%; }
+  body main #contact {
+    text-align: right; }
+    body main #contact h4 {
+      text-transform: uppercase; }
+    body main #contact form .inputs {
+      display: flex;
+      justify-content: space-between; }
+    body main #contact form label {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px; }
+      body main #contact form label input {
+        border: 1px solid #607d8b;
+        width: 470px;
+        height: 40px;
+        padding: 5px;
+        background-color: transparent; }
+      body main #contact form label textarea {
+        width: 100%;
+        border: 1px solid #607d8b;
+        resize: none;
+        padding: 5px;
+        background-color: transparent; }
+      body main #contact form label span {
+        position: relative;
+        color: #607d8b; }
+      body main #contact form label .required {
+        margin-right: 10px; }
+        body main #contact form label .required:after {
+          content: '*';
+          position: absolute;
+          top: 0;
+          right: -10px; }
+    body main #contact form button {
+      background-color: #0401ac;
+      border: none;
+      padding: 10px 70px;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 1s ease-out;
+      margin-top: 15px; }
+      body main #contact form button:hover {
+        background-color: #030193;
+        transition: .5s ease-out; }
+  body footer {
+    padding: 0 0 15px 15px; }
+    body footer span {
+      color: #757575;
+      font-size: 12px; }
+
+/*# sourceMappingURL=style2.css.map */

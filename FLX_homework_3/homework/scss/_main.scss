@@ -1,0 +1,194 @@
+// Write your styles here
+@mixin btn {
+  background-color: $btn-color;
+  border: none;
+  padding: 10px 70px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s ease-out;
+  &:hover {
+    background-color: darken($btn-color, 5%);
+    transition: .5s ease-out;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $content-background;
+  font: $fonts;
+  main {
+    margin: 0 auto;
+    width: 960px;
+  }
+  header {
+    background: $header-background no-repeat top / cover;
+    height: 100vh;
+    //height: 920px;
+    .top-wrapper {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 250px;
+        height: 150px;
+      }
+      nav {
+        a {
+          font-weight: normal;
+          display: inline-block;
+          text-decoration: none;
+          color: $header-text;
+          padding: 20px 115px;
+          text-transform: uppercase;
+          &:nth-child(2) {
+            border-left: 2px solid #607d8b;
+            border-right: 2px solid #607d8b;
+          }
+        }
+      }
+    }
+    section {
+      text-align: center;
+      margin-top: 250px;
+      h1 {
+        color: $header-text;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: bold;
+      }
+      a {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        background-color: $btn-color;
+        padding: 15px 60px;
+        margin-top: 15px;
+      }
+    }
+  }
+  main {
+    .toolbar {
+      text-align: right;
+      padding: 15px 0;
+      input {
+        padding: 10px 15px;
+        border: 1px solid $hr-color;
+        background-color: transparent;
+      }
+    }
+    .post-list {
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+        color: $main-text-color;
+      }
+      article {
+        display: flex;
+        background-color: $article-color;
+        margin-bottom: 15px;
+        padding: 10px 15px 10px 10px;
+        img {
+          margin-right: 10px;
+        }
+        .post {
+          .post-description {
+            font-size: 12px;
+            padding: 10px 0;
+            color: $post-description-color;
+            border-bottom: 1px solid #607d8b;
+          }
+          h3 {
+            color: $article-title;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 5px 0;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.6em;
+            color: $main-text-color;
+          }
+        }
+        .btn {
+          @include btn;
+          float: right;
+          margin-top: 20px;
+        }
+      }
+    }
+    #about {
+      padding: 60px 15px;
+      color: $main-text-color;
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    #contact {
+      text-align: right;
+      h4 {
+        text-transform: uppercase;
+      }
+      form {
+        .inputs {
+          display: flex;
+          justify-content: space-between;
+        }
+        label {
+          display: flex;
+          flex-direction: column;
+          margin-top: 25px;
+          input {
+            border: 1px solid #607d8b;
+            width: 470px;
+            height: 40px;
+            padding: 5px;
+            background-color: transparent;
+          }
+          textarea {
+            width: 100%;
+            border: 1px solid #607d8b;
+            resize: none;
+            padding: 5px;
+            background-color: transparent;
+          }
+          span {
+            position: relative;
+            color: $form-text;
+          }
+          .required {
+            margin-right: 10px;
+            &:after {
+              content: '*';
+              position: absolute;
+              top: 0;
+              right: -10px;
+            }
+          }
+        }
+        button {
+          @include btn;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  footer {
+    padding: 0 0 15px 15px;
+    span {
+      color: $main-text-color;
+      font-size: 12px;
+    }
+  }
+}
