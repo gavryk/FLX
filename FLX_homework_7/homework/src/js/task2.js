@@ -1,50 +1,57 @@
 let play = confirm('Do you want to play a game?'),
-    range = 5,
+    rangeCount = 1,
     prize = 0,
-    totalPrize = 10,
     currentPrize = 10,
-    attempts = 3,
-    startGame = true,
-    randomNum;
+    prizeCounter = 1,
+    startGame;
 
-if (play) {
+if(!play) {
+    alert("You did not become a millionaire, but can.");
+} else {
     startGame = true;
     for (;startGame;) {
-        randomNum = Math.floor(Math.random() * range) + 1;
+        let range = 5 * rangeCount;
+        let randomNum = Math.floor(Math.random() * range) + 1;
         console.log(randomNum);
-        let userNum = Number(prompt('Enter a number from 0 to ' + range +
-                '\nAttempts Left: ' + attempts +
-                '\nTotal Prize: ' + totalPrize +
-                '\nPossible prize on current attempt: ' + currentPrize));
+        let userNum;
+        let gameOver;
 
-        if (userNum === randomNum) {
-            prize += currentPrize;
-            let nextGame = confirm('Congratulation! Your prize is: ' + prize + '$.' + 'Do you want to continue?');
-            if (nextGame) {
-                currentPrize *= 3;
-                randomNum = Math.floor(Math.random() * range);
-                attempts = 3;
-                range += 5;
-                totalPrize *= 3;
+        for (let attempts = 3;attempts > 0; attempts--) {
+            if (attempts === 3) {
+                currentPrize = 10 * prizeCounter;
+            } else if (attempts === 2) {
+                currentPrize = 5 * prizeCounter;
             } else {
+                currentPrize = 2 * prizeCounter;
+            }
+            userNum = Number(prompt('Enter a number from 0 to ' + range +
+                '\nAttempts Left: ' + attempts +
+                '\nTotal Prize: ' + prize +
+                '\nPossible prize on current attempt: ' + currentPrize));
+            if (userNum === randomNum) {
+                gameOver = false;
+                prize += currentPrize;
                 break;
             }
-            continue;
-        } else if (attempts === 1) {
-            break;
         }
-        attempts--;
-        currentPrize = Math.ceil(currentPrize / 2);
-    }
-    alert('Thank you for a game. Your prize is: ' + prize + '$.');
-        let newGame = confirm('Do you want to play again?');
-        if (newGame) {
+        if (gameOver) {
+            alert('Thank you for a game. Your prize is: ' + prize + '$.');
+            startGame = confirm('Do you want to play again?');
             prize = 0;
-            currentPrize = 10;
-            attempts = 3;
+            rangeCount = 1;
+            prizeCounter = 1;
         } else {
-            startGame = false;
+            startGame = confirm('Congratulation! Your prize is: ' + prize + '$.' + ' Do you want to continue?');
+            if (startGame && userNum === randomNum) {
+                rangeCount *= 2;
+                prizeCounter *= 3;
+            } else {
+                alert('Thank you for a game. Your prize is: ' + prize + '$');
+                startGame = confirm('Do you want to play again?');
+                prize = 0;
+                rangeCount = 1;
+                prizeCounter = 1;
+            }
         }
-} else {
-    alert('You did not become a millionaire, but can.');
+    }
 }
