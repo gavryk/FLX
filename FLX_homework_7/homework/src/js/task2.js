@@ -5,14 +5,11 @@ let play = confirm('Do you want to play a game?'),
     prizeCounter = 1,
     startGame;
 
-if(!play) {
-    alert("You did not become a millionaire, but can.");
-} else {
+if (play) {
     startGame = true;
     for (;startGame;) {
         let range = 5 * rangeCount;
         let randomNum = Math.floor(Math.random() * range) + 1;
-        console.log(randomNum);
         let userNum;
         let gameOver;
 
@@ -54,4 +51,6 @@ if(!play) {
             }
         }
     }
+} else {
+    alert("You did not become a millionaire, but can.");
 }
