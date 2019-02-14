@@ -33,7 +33,6 @@ const data = [
     }
 ];
 
-
 // Task 1 find type.
 function findType() {
     let types = [];
