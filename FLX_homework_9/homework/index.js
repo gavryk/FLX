@@ -33,7 +33,7 @@ const data = [
     }
 ];
 
-// Task 1 find type.
+
 function findType() {
     let types = [];
     for(let i = 0; i < arguments.length; i++) {
@@ -43,7 +43,6 @@ function findType() {
 }
 console.log(findType('alo', 5, true, undefined, null));
 
-// task 2 forEach
 function executeforEach(arr, callback) {
     for(let i = 0; i < arr.length; i++) {
         callback(arr[i]);
@@ -51,7 +50,6 @@ function executeforEach(arr, callback) {
 }
 executeforEach([1, 2, 3], el => console.log(el));
 
-// Task 3, el plus 3
 function mapArray(arr, callback) {
     let newArr = [];
     executeforEach(arr, el => {
@@ -61,7 +59,6 @@ function mapArray(arr, callback) {
 }
 console.log(mapArray([2, 5, 6], el => el + 3));
 
-// Task 4
 function filterArray(arr, callback) {
     let newArr = [];
     executeforEach(arr, el => {
@@ -73,7 +70,6 @@ function filterArray(arr, callback) {
 }
 console.log(filterArray([2, 5, 1, 8], el => el > 3));
 
-// Task 5
 function getAmountOfAdultPeople(arr) {
     let ageArr = [];
     filterArray(arr, user => {
@@ -86,7 +82,6 @@ function getAmountOfAdultPeople(arr) {
 
 console.log(getAmountOfAdultPeople(data));
 
-//Task 6
 function getGreenAdultBananaLovers(arr) {
     let filterUser = [];
     filterArray(arr, user => {
@@ -98,7 +93,6 @@ function getGreenAdultBananaLovers(arr) {
 }
 getGreenAdultBananaLovers(data);
 
-//Task 7
 function keys(obj) {
     let keyArr = [];
     for(let key in obj) {
@@ -110,7 +104,6 @@ function keys(obj) {
 }
 console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
 
-//task 8
 function values(obj) {
     let valueArr = [];
     for (let value in obj) {
@@ -122,21 +115,18 @@ function values(obj) {
 }
 console.log(values({keyOne: 1, keyTwo: 2, keyThree: 3}));
 
-//task 9
 function showFormattedDate(date) {
     return `Date: ${date.getDate()} of ${date.toLocaleString('en-US', { month: 'short' })}, ${date.getFullYear()}`
 }
 
 console.log(showFormattedDate(new Date('2019-02-27T01:10:00')));
 
-// Task 10
 function isEvenYear(date) {
     let year = date.getFullYear();
     return year % 2 === 0;
 }
 console.log(isEvenYear(new Date('2019-01-27T01:10:00')));
 
-//Task 11
 function isEvenMonth(date) {
     let month = date.getMonth() + 1;
     return month % 2 === 0;
