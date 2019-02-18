@@ -1,10 +1,3 @@
-let max_cards = 3,
-    num1 = 1,
-    num2 = 2,
-    num3 = 3,
-    taxNum = 100.5,
-    fullTax = 100;
-
 function userCard(index) {
     let credit = 100;
     let transLimit = 100;
@@ -49,6 +42,8 @@ function userCard(index) {
             })
         },
         transferCredits: function(value, card) {
+            let taxNum = 100.5,
+                fullTax = 100;
             let tax = value * taxNum / fullTax;
             if(credit < tax) {
                 console.error('There are not enough money on your card')
@@ -67,6 +62,7 @@ class UserAccount {
         this.cards = [];
     }
     addCard(card) {
+        let max_cards = 3;
         if(this.cards.length < max_cards) {
             if(typeof card !== 'undefined') {
                 this.cards.push(card);
@@ -82,16 +78,16 @@ class UserAccount {
     }
 }
 
-/*Example*/
+// /*Example*/
 // let user = new UserAccount('Bob');
 // user.addCard();
 // user.addCard();
 // user.addCard();
 // user.addCard();
 //
-// let card1 = user.getCardByKey(num1);
-// let card2 = user.getCardByKey(num2);
-// let card3 = user.getCardByKey(num3);
+// let card1 = user.getCardByKey(1);
+// let card2 = user.getCardByKey(2);
+// let card3 = user.getCardByKey(3);
 //
 // card1.putCredits(500);
 // card1.setTransactionLimit(800);
