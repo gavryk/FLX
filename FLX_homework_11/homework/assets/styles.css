@@ -25,19 +25,20 @@
     align-items: center;
     justify-content: center;
     width: 70%;
+    margin-bottom: 20px;
 }
 
-.addTask input {
+ input {
     width: 90%;
     height: 2vw;
     padding: 0 1vw;
-    font-size: 1.2vw;
+    font-size: 18px;
     border: 1px solid #000;
     border-radius: 0.6vh;
 }
 
 .addTask i {
-    font-size: 3vw;
+    font-size: 40px;
     width: 6%;
     margin-left: 1.5%;
     color: #000;
@@ -46,7 +47,6 @@
 .changeTask {
     border-top: 2px solid #000;
     width: 90%;
-    margin: 4vh 0 3vh 0;
 }
 #list{
 	padding: 0;
@@ -60,27 +60,26 @@
 
 .item .checkbox {
     width: 5%;
-    font-size: 3vw;
+    font-size: 35px;
     line-height: 5%;
 }
-.item .checkbox:hover {
-	cursor: pointer;
-}
+
 
 .item .label {
     width: 90%;
-cursor: move;
-font-size: 3vh;
+font-size: 18px;
 }
 .item .delete {
     width: 5%;
-    font-size: 3vw;
+    font-size: 35px;
     line-height: 5%;
 }
 .item .delete:hover{
     cursor: pointer;
 }
-
+.item .checkbox:hover {
+    cursor: pointer;
+}
 .logo {
     width: 5vw;
     padding-bottom: 1vh;
